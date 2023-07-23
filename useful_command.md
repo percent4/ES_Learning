@@ -54,3 +54,7 @@ curl -XPOST IP:9200/索引名称/_search?pretty -d "{\"query\": {\"match_all\": 
 
 curl -XPOST IP:9200/索引名称/_search?pretty -d "{\"query\": {\"match_all\": {} }, \"_source\": [\"context\"]}"
 
+- 删除某个index
+
+curl -XDELETE 'IP:9200/index_name'
+

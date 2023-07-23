@@ -2,9 +2,15 @@
 
 - Jclian91
 
-### ES_Learning
+### 介绍
 
-Example codes for Elasticsearch learning with Python.
+`Elasticsearch`和`Kibana`学习笔记，编程语言为Python.
+
+### 环境搭建
+
+ElasticSearch以及Kibana的版本为7.x, 配置参考`docker-compose.yml`文件，启动命令：`docker-compose up -d`.
+
+ik分词器的配置参考es/ik/config/IKAnalyzer.cfg.xml.
 
 ### 文件说明
 
