@@ -1,3 +1,5 @@
+### 基础命令
+
 - 查看ElasticSearch是否启动成功：
 
 curl http://IP:9200
@@ -23,6 +25,8 @@ curl http://IP:9200/_cat/plugins?v&s=component&h=name,component,version,descript
 - 查看ik插件的分词结果
 
 curl -H 'Content-Type: application/json'  -XGET 'http://IP:9200/_analyze?pretty' -d '{"analyzer":"ik_max_word","text":"美国留给伊拉克的是个烂摊子吗"}'
+
+### index操作
 
 - 查看某个index的mapping
 
@@ -57,4 +61,54 @@ curl -XPOST IP:9200/索引名称/_search?pretty -d "{\"query\": {\"match_all\": 
 - 删除某个index
 
 curl -XDELETE 'IP:9200/index_name'
+
+### ES搜索
+
+1. 如果有多个搜索关键字， Elastic 认为它们是or关系。
+2. 如果要执行多个关键词的and搜索，必须使用布尔查询。
+
+```bash
+$ curl 'localhost:9200/索引名称/文档类型/_search'  -d '
+{
+  "query": {
+    "bool": {
+      "must": [
+        { "match": { "content": "软件" } },
+        { "match": { "content": "系统" } }
+      ]
+    }
+  }
+}'
+```
+
+3. 复杂搜索：
+
+SQL
+
+```sql
+select * from test_index where name='tom' or (hired =true and (personality ='good' and rude != true ))
+```
+
+DSL:
+
+```sql
+GET /test_index/_search
+{
+    "query": {
+            "bool": {
+                "must": { "match":{ "name": "tom" }},
+                "should": [
+                    { "match":{ "hired": true }},
+                    { "bool": {
+                        "must":{ "match": { "personality": "good" }},
+                        "must_not": { "match": { "rude": true }}
+                    }}
+                ],
+                "minimum_should_match": 1
+            }
+    }
+}
+```
+
+4. 模糊搜索：[https://blog.csdn.net/UbuntuTouch/article/details/101287399](https://blog.csdn.net/UbuntuTouch/article/details/101287399)
 

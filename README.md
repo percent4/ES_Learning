@@ -12,6 +12,8 @@ ElasticSearch以及Kibana的版本为7.x, 配置参考`docker-compose.yml`文件
 
 ik分词器的配置参考es/ik/config/IKAnalyzer.cfg.xml.
 
+可视化工具：Kibana, elasticsearch-head(有对应的Chrome插件)
+
 ### 文件说明
 
 - 基础操作: `basic_operation.py`
