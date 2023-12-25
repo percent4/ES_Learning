@@ -1,0 +1,73 @@
+
+version: '3'
+
+services:
+  mysql8.0:
+    image: mysql:8.0
+    container_name: mysql8.0
+    restart: always
+    environment:
+      TZ: Asia/Shanghai
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: orm_test
+    ports:
+      - 3306:3306
+    volumes:
+      - ./mysql/data/:/var/lib/mysql/
+      - ./mysql/conf/:/etc/mysql/conf.d/
+      - ./mysql/init/:/docker-entrypoint-initdb.d/
+    command:
+      # 将mysql8.0默认密码策略 修改为 原先 策略 (mysql8.0对其默认策略做了更改 会导致密码无法匹配)
+      --default-authentication-plugin=mysql_native_password
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+      --explicit_defaults_for_timestamp=true
+    networks:
+      - mysql_elk_net
+
+  logstash:
+    container_name: logstash-7.17.0
+    image: docker.elastic.co/logstash/logstash:7.17.0
+    volumes:
+      - ./logstash/config/logstash.yml:/usr/share/logstash/logstash.yml
+      - ./logstash/data:/usr/share/logstash/data
+      - ./logstash/pipeline:/usr/share/logstash/pipeline
+    networks:
+      - mysql_elk_net
+    depends_on:
+      - elasticsearch
+
+  elasticsearch:
+    container_name: elasticsearch-7.17.0
+    image: elasticsearch:7.17.0
+    environment:
+      - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m"
+      - "http.host=0.0.0.0"
+      - "node.name=elastic01"
+      - "cluster.name=cluster_elasticsearch"
+      - "discovery.type=single-node"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - ./es/plugins:/usr/share/elasticsearch/plugins
+      - ./es/data:/usr/share/elasticsearch/data
+    networks:
+      - mysql_elk_net
+    depends_on:
+      - mysql8.0
+
+  kibana:
+    container_name: kibana-7.17.0
+    image: kibana:7.17.0
+    ports:
+      - "5601:5601"
+    networks:
+      - mysql_elk_net
+    depends_on:
+      - elasticsearch
+
+# 网络配置
+networks:
+  mysql_elk_net:
+    driver: bridge

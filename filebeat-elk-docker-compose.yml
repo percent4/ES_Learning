@@ -1,0 +1,63 @@
+version: "3.1"
+services:
+  filebeat:
+    container_name: video-filebeat
+    image: elastic/filebeat:7.17.0
+    restart: always
+    user: root
+    volumes:
+      - ./filebeat/logs:/usr/share/filebeat/target
+      - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml
+      - ./filebeat/data:/usr/share/filebeat/data
+    ports:
+      - "9000:9000"
+    networks:
+      - filebeat_elk_net
+
+  logstash:
+    container_name: logstash-7.17.0
+    image: docker.elastic.co/logstash/logstash:7.17.0
+    volumes:
+      - ./logstash/config/logstash.yml:/usr/share/logstash/logstash.yml
+      - ./logstash/data:/usr/share/logstash/data
+      - ./logstash/pipeline:/usr/share/logstash/pipeline
+    ports:
+      - "5044:5044"
+    networks:
+      - filebeat_elk_net
+    depends_on:
+      - filebeat
+      - elasticsearch
+
+  elasticsearch:
+    container_name: elasticsearch-7.17.0
+    image: elasticsearch:7.17.0
+    environment:
+      - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m"
+      - "http.host=0.0.0.0"
+      - "node.name=elastic01"
+      - "cluster.name=cluster_elasticsearch"
+      - "discovery.type=single-node"
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    volumes:
+      - ./es/plugins:/usr/share/elasticsearch/plugins
+      - ./es/data:/usr/share/elasticsearch/data
+    networks:
+      - filebeat_elk_net
+
+  kibana:
+    container_name: kibana-7.17.0
+    image: kibana:7.17.0
+    ports:
+      - "5601:5601"
+    networks:
+      - filebeat_elk_net
+    depends_on:
+      - elasticsearch
+
+# 网络配置
+networks:
+  filebeat_elk_net:
+    driver: bridge

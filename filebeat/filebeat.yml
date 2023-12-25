@@ -1,0 +1,9 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /usr/share/filebeat/target/*.log
+output.logstash:
+  hosts: ["logstash:5044"]
+processors:
+  - add_id: ~

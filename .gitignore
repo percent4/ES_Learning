@@ -1,3 +1,5 @@
 .idea
 es/data
 __pycache__
+mysql/data
+filebeat/data
