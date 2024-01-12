@@ -4,7 +4,7 @@
 
 ### 介绍
 
-`Elasticsearch`和`Kibana`学习笔记，编程语言为Python.
+`Elasticsearch`和`Kibana`, `ELK`学习笔记，编程语言为Python.
 
 ### 环境搭建
 
@@ -19,3 +19,14 @@ ik分词器的配置参考es/ik/config/IKAnalyzer.cfg.xml.
 - 基础操作: `basic_operation.py`
 - 数据批量插入: `batch_data_insert.py`
 - 部分有用的命令: `useful_command.md`
+
+### ELK相关
+
+Beats -> Logstash -> ElasticSearch -> Kibana
+
+### 文档
+
+参考docs目录:
+
+1. elk入门笔记1.md
+2. Kibana中的可视化数据分析功能.md
