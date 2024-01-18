@@ -8,7 +8,7 @@
 
 ### 环境搭建
 
-ElasticSearch以及Kibana的版本为7.x, 配置参考`docker-compose.yml`文件，启动命令：`docker-compose up -d`.
+ElasticSearch以及Kibana的版本为8.11.0, 配置参考`docker-compose.yml`文件，启动命令：`docker-compose up -d`.
 
 ik分词器的配置参考es/ik/config/IKAnalyzer.cfg.xml.
 

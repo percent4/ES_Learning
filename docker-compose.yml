@@ -2,14 +2,15 @@ version: "3.1"
 # 服务配置
 services:
   elasticsearch:
-    container_name: elasticsearch-7.17.0
-    image: elasticsearch:7.17.0
+    container_name: elasticsearch-8.11.0
+    image: elasticsearch:8.11.0
     environment:
       - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m"
       - "http.host=0.0.0.0"
       - "node.name=elastic01"
       - "cluster.name=cluster_elasticsearch"
       - "discovery.type=single-node"
+      - "xpack.security.enabled=false"
     ports:
       - "9200:9200"
       - "9300:9300"
@@ -20,10 +21,12 @@ services:
       - elastic_net
 
   kibana:
-    container_name: kibana-7.17.0
-    image: kibana:7.17.0
+    container_name: kibana-8.11.0
+    image: kibana:8.11.0
     ports:
       - "5601:5601"
+    depends_on:
+      - elasticsearch
     networks:
       - elastic_net
 
