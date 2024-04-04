@@ -1,0 +1,1295 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../es_useful_command/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>ELK - ES学习</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#elk" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ES学习" class="md-header__button md-logo" aria-label="ES学习" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ES学习
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ELK
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  tutorials
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ES学习" class="md-nav__button md-logo" aria-label="ES学习" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ES学习
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    tutorials
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ELK
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ELK
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elk" class="md-nav__link">
+    <span class="md-ellipsis">
+      ELK简介
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ELK简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filebeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filebeat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logstash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logstash
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      ElasticSearch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kibana" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kibana
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logstash_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logstash入门
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logstash入门">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例配置1（标准输入、输出）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例配置2（读取文件）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3grok" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例配置3（Grok插件）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-multiline" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例解析配置4（多行读取插件 multiline）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elk_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ELK搭建简单示例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elk_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ELK日志系统实战
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ELK日志系统实战">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flask服务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elk_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ELK搭建
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../es_useful_command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ES commands
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kibana%E4%B8%AD%E7%9A%84%E5%8F%AF%E8%A7%86%E5%8C%96%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%8A%9F%E8%83%BD/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Visualize in Kibana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BD%BF%E7%94%A8ElasticSearch%E8%BF%9B%E8%A1%8C%E8%87%AA%E7%84%B6%E8%AF%AD%E8%A8%80%E5%A4%84%E7%90%86%EF%BC%9A%E4%BB%A5%E5%91%BD%E5%90%8D%E5%AE%9E%E4%BD%93%E8%AF%86%E5%88%AB%E4%B8%BA%E4%BE%8B/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ES with NLP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#elk" class="md-nav__link">
+    <span class="md-ellipsis">
+      ELK简介
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ELK简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filebeat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Filebeat
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logstash" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logstash
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elasticsearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      ElasticSearch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kibana" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kibana
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logstash_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logstash入门
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Logstash入门">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例配置1（标准输入、输出）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例配置2（读取文件）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3grok" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例配置3（Grok插件）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-multiline" class="md-nav__link">
+    <span class="md-ellipsis">
+      示例解析配置4（多行读取插件 multiline）
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elk_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      ELK搭建简单示例
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elk_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ELK日志系统实战
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ELK日志系统实战">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flask" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flask服务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#elk_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      ELK搭建
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      数据分析
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>ELK</h1>
+
+<h2 id="elk">ELK简介</h2>
+<p>什么是ELK？</p>
+<p>ELK是<code>Elasticsearch</code>、<code>Logstash</code>、<code>Kibana</code>三大开源框架首字母大写简称(后来出现的filebeat属于beats家族中的一员，可以用来替代logstash的数据收集功能，比较轻量级)，也被称为<code>Elastic Stack</code>。</p>
+<p><img alt="ELK架构简图" src="https://s2.loli.net/2023/12/23/2TsGfNBvDcwRxU8.png" /></p>
+<h3 id="filebeat">Filebeat</h3>
+<p>Filebeat是用于转发和集中日志数据的轻量级传送工具。Filebeat监视您指定的日志文件或位置，收集日志事件，并将它们转发到Elasticsearch或 Logstash进行索引。Filebeat的工作方式如下：启动Filebeat时，它将启动一个或多个输入，这些输入将在为日志数据指定的位置中查找。对于Filebeat所找到的每个日志，Filebeat都会启动收集器。每个收集器都读取单个日志以获取新内容，并将新日志数据发送到libbeat，libbeat将聚集事件，并将聚集的数据发送到为Filebeat配置的输出。</p>
+<h3 id="logstash">Logstash</h3>
+<p>Logstash是免费且开放的服务器端数据处理管道，能够从多个来源采集数据，转换数据，然后将数据发送到您最喜欢的“存储库”中。Logstash能够动态地采集、转换和传输数据，不受格式或复杂度的影响。利用Grok从非结构化数据中派生出结构，从IP地址解码出地理坐标，匿名化或排除敏感字段，并简化整体处理过程。</p>
+<h3 id="elasticsearch">ElasticSearch</h3>
+<p>Elasticsearch是Elastic Stack核心的分布式搜索和分析引擎,是一个基于Lucene、分布式、通过Restful方式进行交互的近实时搜索平台框架。Elasticsearch为所有类型的数据提供近乎实时的搜索和分析。无论您是结构化文本还是非结构化文本，数字数据或地理空间数据，Elasticsearch都能以支持快速搜索的方式有效地对其进行存储和索引。</p>
+<h3 id="kibana">Kibana</h3>
+<p>Kibana是一个针对Elasticsearch的开源分析及可视化平台，用来搜索、查看交互存储在Elasticsearch索引中的数据。使用Kibana，可以通过各种图表进行高级数据分析及展示。并且可以为 Logstash 和 ElasticSearch 提供的日志分析友好的 Web 界面，可以汇总、分析和搜索重要数据日志。还可以让海量数据更容易理解。它操作简单，基于浏览器的用户界面可以快速创建仪表板（dashboard）实时显示Elasticsearch查询动态。</p>
+<h2 id="logstash_1">Logstash入门</h2>
+<p>使用Docker-Compose启动Logstash服务，其中docker-compose.yml文件如下：</p>
+<pre><code class="language-yml">version: &quot;3.1&quot;
+# 服务配置
+services:
+  logstash:
+    container_name: logstash-7.17.0
+    image: docker.elastic.co/logstash/logstash:7.17.0
+    volumes:
+      - ./logstash/data:/usr/share/logstash/data
+      - ./logstash/pipeline:/usr/share/logstash/pipeline
+    networks:
+      - elk_net
+
+# 网络配置
+networks:
+  elk_net:
+    driver: bridge
+</code></pre>
+<h3 id="1">示例配置1（标准输入、输出）</h3>
+<p>每隔10秒输出字符串：Hello from Logstash!</p>
+<pre><code class="language-yml">input {
+  heartbeat {
+    interval =&gt; 10
+    message  =&gt; 'Hello from Logstash!'
+  }
+}
+output {
+    stdout {
+        codec =&gt; rubydebug
+    }
+}
+</code></pre>
+<h3 id="2">示例配置2（读取文件）</h3>
+<p>读取文件内容(文件的最后一行将不会读取)，示例文件为test.log</p>
+<pre><code class="language-txt">hello world!
+From Shanghai To Beijing
+this is a log for test in logstash!
+
+</code></pre>
+<p>配置文件如下：</p>
+<pre><code class="language-yml">input {
+  file {
+    path =&gt; &quot;/usr/share/logstash/data/test.log&quot;
+    start_position =&gt; &quot;beginning&quot;
+  }
+}
+output {
+    stdout {
+        codec =&gt; rubydebug
+    }
+}
+</code></pre>
+<p>读取结果如下（顺序已打乱）：</p>
+<pre><code class="language-txt">logstash-7.17.0  | {
+logstash-7.17.0  |        &quot;message&quot; =&gt; &quot;hello world!&quot;,
+logstash-7.17.0  |     &quot;@timestamp&quot; =&gt; 2023-12-23T08:43:22.836Z,
+logstash-7.17.0  |           &quot;host&quot; =&gt; &quot;333e14d2874a&quot;,
+logstash-7.17.0  |           &quot;path&quot; =&gt; &quot;/usr/share/logstash/data/test.log&quot;,
+logstash-7.17.0  |       &quot;@version&quot; =&gt; &quot;1&quot;
+logstash-7.17.0  | }
+logstash-7.17.0  | {
+logstash-7.17.0  |        &quot;message&quot; =&gt; &quot;this is a log for test in logstash!&quot;,
+logstash-7.17.0  |     &quot;@timestamp&quot; =&gt; 2023-12-23T08:43:22.843Z,
+logstash-7.17.0  |           &quot;host&quot; =&gt; &quot;333e14d2874a&quot;,
+logstash-7.17.0  |           &quot;path&quot; =&gt; &quot;/usr/share/logstash/data/test.log&quot;,
+logstash-7.17.0  |       &quot;@version&quot; =&gt; &quot;1&quot;
+logstash-7.17.0  | }
+logstash-7.17.0  | {
+logstash-7.17.0  |        &quot;message&quot; =&gt; &quot;From Shanghai To Beijing&quot;,
+logstash-7.17.0  |     &quot;@timestamp&quot; =&gt; 2023-12-23T08:43:22.842Z,
+logstash-7.17.0  |           &quot;host&quot; =&gt; &quot;333e14d2874a&quot;,
+logstash-7.17.0  |           &quot;path&quot; =&gt; &quot;/usr/share/logstash/data/test.log&quot;,
+logstash-7.17.0  |       &quot;@version&quot; =&gt; &quot;1&quot;
+logstash-7.17.0  | }
+</code></pre>
+<h3 id="3grok">示例配置3（Grok插件）</h3>
+<p>Grok为正则表达式，Logstash（v4.4.3）已内置120种表达式，参考网址为：<a href="https://github.com/logstash-plugins/logstash-patterns-core/tree/main/patterns">https://github.com/logstash-plugins/logstash-patterns-core/tree/main/patterns</a>.</p>
+<p>读取Nginx日志文件，并使用Grok进行过滤。Nginx文件示例如下：</p>
+<pre><code class="language-txt">112.195.209.90 - - [20/Feb/2018:12:12:14 +0800] &quot;GET / HTTP/1.1&quot; 200 190 &quot;-&quot; &quot;Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Mobile Safari/537.36&quot; &quot;-&quot;
+
+</code></pre>
+<p>配置文件如下：</p>
+<pre><code class="language-yml">input {
+  file {
+    path =&gt; &quot;/usr/share/logstash/data/test.log&quot;
+    start_position =&gt; &quot;beginning&quot;
+  }
+}
+filter {
+    grok {
+        match =&gt; {
+            &quot;message&quot; =&gt; &quot;%{COMBINEDAPACHELOG}&quot;
+        }
+    }
+}
+output {
+    stdout {
+        codec =&gt; rubydebug
+    }
+}
+</code></pre>
+<p>解析结果为：</p>
+<pre><code>logstash-7.17.0  | {
+logstash-7.17.0  |        &quot;@version&quot; =&gt; &quot;1&quot;,
+logstash-7.17.0  |         &quot;message&quot; =&gt; &quot;112.195.209.90 - - [20/Feb/2018:12:12:14 +0800] \&quot;GET / HTTP/1.1\&quot; 200 190 \&quot;-\&quot; \&quot;Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Mobile Safari/537.36\&quot; \&quot;-\&quot;&quot;,
+logstash-7.17.0  |       &quot;timestamp&quot; =&gt; &quot;20/Feb/2018:12:12:14 +0800&quot;,
+logstash-7.17.0  |        &quot;referrer&quot; =&gt; &quot;\&quot;-\&quot;&quot;,
+logstash-7.17.0  |           &quot;agent&quot; =&gt; &quot;\&quot;Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Mobile Safari/537.36\&quot;&quot;,
+logstash-7.17.0  |            &quot;host&quot; =&gt; &quot;fa3dbceea206&quot;,
+logstash-7.17.0  |         &quot;request&quot; =&gt; &quot;/&quot;,
+logstash-7.17.0  |        &quot;clientip&quot; =&gt; &quot;112.195.209.90&quot;,
+logstash-7.17.0  |            &quot;path&quot; =&gt; &quot;/usr/share/logstash/data/test.log&quot;,
+logstash-7.17.0  |            &quot;verb&quot; =&gt; &quot;GET&quot;,
+logstash-7.17.0  |            &quot;auth&quot; =&gt; &quot;-&quot;,
+logstash-7.17.0  |        &quot;response&quot; =&gt; &quot;200&quot;,
+logstash-7.17.0  |           &quot;ident&quot; =&gt; &quot;-&quot;,
+logstash-7.17.0  |           &quot;bytes&quot; =&gt; &quot;190&quot;,
+logstash-7.17.0  |     &quot;httpversion&quot; =&gt; &quot;1.1&quot;,
+logstash-7.17.0  |      &quot;@timestamp&quot; =&gt; 2023-12-23T09:33:50.220Z
+logstash-7.17.0  | }
+</code></pre>
+<p>Kibana在Dev Tools中内置了Grok Debugger(调试器)：</p>
+<p><img alt="Kibana中的Grok调试器" src="https://s2.loli.net/2023/12/23/xAQ8bKothP3qNXk.png" /></p>
+<h3 id="4-multiline">示例解析配置4（多行读取插件 multiline）</h3>
+<p>对 multiline 插件来说，有三个设置比较重要：negate、pattern 和 what。</p>
+<ul>
+<li>pattern: 类型是string，要匹配的正则表达式</li>
+<li>negate: 类型是boolean，默认false，否定正则表达式</li>
+<li>what: 必须设置，可以为 previous 或 next， 如果正则表达式匹配了，那么该事件是属于下一个或是前一个事件</li>
+</ul>
+<p>multiline插件可以多行读取。示例文件内容如下(注意最后一行为空行)：</p>
+<pre><code class="language-txt">[Aug/08/08 14:54:03] hello world
+[Aug/08/09 14:54:04] hello logstash
+    hello best practice
+    hello raochenlin
+[Aug/08/10 14:54:05] the end
+
+</code></pre>
+<p>配置文件：</p>
+<pre><code class="language-yml">input {
+  file {
+    path =&gt; &quot;/usr/share/logstash/data/test.log&quot;
+    start_position =&gt; &quot;beginning&quot;
+    codec =&gt; multiline {
+        pattern =&gt; &quot;^\[&quot;
+        negate =&gt; true
+        what =&gt; &quot;previous&quot;
+    }
+  }
+}
+output {
+    stdout {
+        codec =&gt; rubydebug
+    }
+}
+</code></pre>
+<p>解析结果如下：</p>
+<pre><code class="language-json">{
+       &quot;message&quot; =&gt; &quot;[Aug/08/08 14:54:03] hello world&quot;,
+    &quot;@timestamp&quot; =&gt; 2023-12-23T10:41:20.884Z,
+          &quot;path&quot; =&gt; &quot;/usr/share/logstash/data/test.log&quot;,
+          &quot;host&quot; =&gt; &quot;b62820accf76&quot;,
+      &quot;@version&quot; =&gt; &quot;1&quot;
+}
+{
+       &quot;message&quot; =&gt; &quot;[Aug/08/09 14:54:04] hello logstash\n    hello best practice\n    hello raochenlin&quot;,
+          &quot;path&quot; =&gt; &quot;/usr/share/logstash/data/test.log&quot;,
+          &quot;tags&quot; =&gt; [
+        [0] &quot;multiline&quot;
+    ],
+    &quot;@timestamp&quot; =&gt; 2023-12-23T10:44:24.846Z,
+          &quot;host&quot; =&gt; &quot;b62820accf76&quot;,
+      &quot;@version&quot; =&gt; &quot;1&quot;
+}
+</code></pre>
+<p>由于参数what设置为previous，因此只解析出两条数据。当what设置为next时，可解析出三条数据，但解析结果有变化，如下：</p>
+<pre><code class="language-json">{
+       &quot;message&quot; =&gt; &quot;[Aug/08/08 14:54:03] hello world&quot;,
+          &quot;path&quot; =&gt; &quot;/usr/share/logstash/data/test.log&quot;,
+    &quot;@timestamp&quot; =&gt; 2023-12-23T10:49:23.395Z,
+          &quot;host&quot; =&gt; &quot;492dfb254e78&quot;,
+      &quot;@version&quot; =&gt; &quot;1&quot;
+}
+{
+       &quot;message&quot; =&gt; &quot;    hello best practice\n    hello raochenlin\n[Aug/08/10 14:54:05] the end&quot;,
+    &quot;@timestamp&quot; =&gt; 2023-12-23T10:49:23.415Z,
+          &quot;path&quot; =&gt; &quot;/usr/share/logstash/data/test.log&quot;,
+          &quot;host&quot; =&gt; &quot;492dfb254e78&quot;,
+      &quot;@version&quot; =&gt; &quot;1&quot;,
+          &quot;tags&quot; =&gt; [
+        [0] &quot;multiline&quot;
+    ]
+}
+{
+       &quot;message&quot; =&gt; &quot;[Aug/08/09 14:54:04] hello logstash&quot;,
+          &quot;path&quot; =&gt; &quot;/usr/share/logstash/data/test.log&quot;,
+    &quot;@timestamp&quot; =&gt; 2023-12-23T10:49:23.414Z,
+          &quot;host&quot; =&gt; &quot;492dfb254e78&quot;,
+      &quot;@version&quot; =&gt; &quot;1&quot;
+}
+</code></pre>
+<h2 id="elk_1">ELK搭建简单示例</h2>
+<p>结合Logstash, ElasticSearch与Kibana，将data文件夹中的以log结尾的文件，逐行导入至ElasticSearch中。</p>
+<p>logstash.conf配置如下：</p>
+<pre><code class="language-yml">input {
+  file {
+    path =&gt; &quot;/usr/share/logstash/data/*.log&quot;
+    start_position =&gt; &quot;beginning&quot;
+  }
+}
+output {
+    stdout {
+        codec =&gt; rubydebug
+    }
+    elasticsearch {
+        hosts =&gt; [&quot;http://elasticsearch:9200&quot;]
+        index =&gt; &quot;test_log&quot;
+        action =&gt; &quot;index&quot;
+    }
+}
+</code></pre>
+<p>docker-compose.yml文件如下：</p>
+<pre><code class="language-yml">version: &quot;3.1&quot;
+# 服务配置
+services:
+  logstash:
+    container_name: logstash-7.17.0
+    image: docker.elastic.co/logstash/logstash:7.17.0
+    volumes:
+      - ./logstash/config/logstash.yml:/usr/share/logstash/logstash.yml
+      - ./logstash/data:/usr/share/logstash/data
+      - ./logstash/pipeline:/usr/share/logstash/pipeline
+    networks:
+      - elk_net
+    depends_on:
+      - elasticsearch
+
+  elasticsearch:
+    container_name: elasticsearch-7.17.0
+    image: elasticsearch:7.17.0
+    environment:
+      - &quot;ES_JAVA_OPTS=-Xms1024m -Xmx1024m&quot;
+      - &quot;http.host=0.0.0.0&quot;
+      - &quot;node.name=elastic01&quot;
+      - &quot;cluster.name=cluster_elasticsearch&quot;
+      - &quot;discovery.type=single-node&quot;
+    ports:
+      - &quot;9200:9200&quot;
+      - &quot;9300:9300&quot;
+    volumes:
+      - ./es/plugins:/usr/share/elasticsearch/plugins
+      - ./es/data:/usr/share/elasticsearch/data
+    networks:
+      - elk_net
+
+  kibana:
+    container_name: kibana-7.17.0
+    image: kibana:7.17.0
+    ports:
+      - &quot;5601:5601&quot;
+    networks:
+      - elk_net
+    depends_on:
+      - elasticsearch
+
+# 网络配置
+networks:
+  elk_net:
+    driver: bridge
+</code></pre>
+<h2 id="elk_2">ELK日志系统实战</h2>
+<p>我们来设计这样一个日志系统，其中Logstash可将Flask运行过程中的日志进行收集，并导入至ElasticSearch中，再使用Kibana进行数据分析。</p>
+<h3 id="flask">Flask服务</h3>
+<p>使用Flask构建简单的web服务，代码如下：</p>
+<pre><code class="language-python"># -*- coding: utf-8 -*-
+# @file: server.py
+# @time: 2023/12/23 19:17
+import time
+import random
+from flask import Flask, Response
+import logging
+
+logging.basicConfig(filename='../../logstash/data/flask.log',
+                    level=logging.DEBUG,
+                    format='%(asctime)s-%(filename)s-%(funcName)s-%(levelname)s-%(message)s')
+logger = logging.getLogger()
+
+app = Flask(&quot;elk_test&quot;)
+
+
+@app.route('/')
+def index():
+    t1 = time.time()
+    logger.info(f&quot;api_endpoint: /, status: 200, cost_time: {(time.time() - t1) * 1000}&quot;)
+    return &quot;Hello index&quot;, 200
+
+
+@app.route(&quot;/io_task&quot;)
+def io_task():
+    t1 = time.time()
+    time.sleep(2)
+    logger.info(f&quot;api_endpoint: /io_task, status: 200, cost_time: {(time.time() - t1) * 1000}&quot;)
+    return &quot;IO bound task finish!&quot;, 200
+
+
+@app.route(&quot;/cpu_task&quot;)
+def cpu_task():
+    t1 = time.time()
+    for i in range(10000):
+        n = i * i * i
+    logger.info(f&quot;api_endpoint: /cpu_task, status: 200, cost_time: {(time.time() - t1) * 1000}&quot;)
+    return &quot;CPU bound task finish!&quot;, 200
+
+
+@app.route(&quot;/random_sleep&quot;)
+def random_sleep():
+    t1 = time.time()
+    time.sleep(random.randint(0, 5))
+    logger.info(f&quot;api_endpoint: /random_sleep, status: 200, cost_time: {(time.time() - t1) * 1000}&quot;)
+    return &quot;random sleep&quot;, 200
+
+
+@app.route(&quot;/random_status&quot;)
+def random_status():
+    t1 = time.time()
+    status_code = random.choice([200] * 6 + [300, 400, 400, 500])
+    logger.info(f&quot;api_endpoint: /random_status, status: {status_code}, cost_time: {(time.time() - t1) * 1000}&quot;)
+    return Response(&quot;random status&quot;, status=status_code)
+
+
+if __name__ == '__main__':
+    app.run(host=&quot;0.0.0.0&quot;, port=5000, debug=True)
+
+</code></pre>
+<p>使用下面的shell脚本进行HTTP请求模拟：</p>
+<pre><code class="language-bash">TIMES=5
+for i in $(eval echo &quot;{1..$TIMES}&quot;)
+do
+    siege -c 1 -r 10 http://localhost:5000/
+    siege -c 1 -r 5 http://localhost:5000/io_task
+    siege -c 1 -r 5 http://localhost:5000/cpu_task
+    siege -c 1 -r 3 http://localhost:5000/random_sleep
+    siege -c 1 -r 10 http://localhost:5000/random_status
+    sleep 5
+done
+</code></pre>
+<p>日志记录在flask.log文件中。</p>
+<h3 id="elk_3">ELK搭建</h3>
+<p>对上述日志，搭建ELK，docker-compose.yml同上述<code>ELK搭建简单示例</code>，logstash.conf改动如下：</p>
+<pre><code class="language-yml">input {
+  file {
+    path =&gt; &quot;/usr/share/logstash/data/flask.log&quot;
+    start_position =&gt; &quot;beginning&quot;
+  }
+}
+filter {
+    # 只对cost_time所在列进行解析
+    if &quot;cost_time&quot; in [message] {
+        grok {
+            match =&gt; {
+                &quot;message&quot; =&gt; &quot;%{TIMESTAMP_ISO8601:request_finish_time}-%{WORD:script}.py-%{WORD:module}-%{LOGLEVEL:loglevel}-api_endpoint: %{DATA:api_endpoint}, status: %{NUMBER:status:int}, cost_time: %{NUMBER:cost_time:float}&quot;
+            }
+        }
+        # 使用mutate过滤器替换字符
+        mutate {
+            # 替换空格为T
+            gsub =&gt; [ &quot;request_finish_time&quot;, &quot; &quot;, &quot;T&quot; ]
+            # 替换逗号为点
+            gsub =&gt; [ &quot;request_finish_time&quot;, &quot;,&quot;, &quot;.&quot; ]
+        }
+
+        # 使用date过滤器解析和格式化日期
+        date {
+            match =&gt; [ &quot;request_finish_time&quot;, &quot;ISO8601&quot; ]
+        }
+    }
+    else {
+        drop { }
+    }
+}
+output {
+    stdout {
+        codec =&gt; rubydebug
+    }
+    elasticsearch {
+        hosts =&gt; [&quot;http://elasticsearch:9200&quot;]
+        index =&gt; &quot;flask_log&quot;
+        action =&gt; &quot;index&quot;
+    }
+}
+</code></pre>
+<p>只对有cost_time所在的行进行解析，其它行丢弃，导入至ElasticSearch中的flask_log这个索引中。</p>
+<h3 id="_1">数据分析</h3>
+<p>对上述的五个API Endpoint进行请求占比分析，饼图如下：</p>
+<p><img alt="每个API的请求占比" src="https://s2.loli.net/2023/12/23/DJkV8tpjqSKPRU1.png" /></p>
+<p>同时，对cost_time进行数据分析，其平均值，90, 95, 99分位数如下表：</p>
+<p><img alt="每个API的cost_time分析" src="https://s2.loli.net/2023/12/23/tk1sDjF7LwNIrPf.png" /></p>
+<p>上述的日志记录方式还有待改进，比如记录程序报错信息，使用json字段解析而不是Grok表达式会更容易些。</p>
+<blockquote>
+<p>注意：使用ChatGPT去做Grok正则表达式是真的好用啊，大模型的问答基本可用，只需略加修改即可，比如上述的Grok正则表达式用ChatGPT做的。</p>
+</blockquote>
+<h2 id="_2">总结</h2>
+<p>ELK的用途广泛，比较常见的场景是日志系统，但也可以用来实现数据同步等功能。</p>
+<p>本文主要介绍了Logstash工具和它的使用方式，以及ELK的搭建简单示例和实战。后面有机会将会介绍ELK的数据同步及Beats家族。</p>
+<p>感谢大家的阅读~</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
