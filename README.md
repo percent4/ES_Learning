@@ -24,9 +24,25 @@ ik分词器的配置参考es/ik/config/IKAnalyzer.cfg.xml.
 
 Beats -> Logstash -> ElasticSearch -> Kibana
 
+### Eland 相关
+
+Eland for Machine Learning. Use `eland-docker-compose.yml` for environment preparation.
+
+command:
+
+```bash
+docker run -itd --rm docker.elastic.co/eland/eland \
+	eland_import_hub_model --url http://localhost:9200 \ 
+	--hub-model-id shibing624/bert4ner-base-chinese \
+	--task-type ner \
+	--start \
+	--clear-previous
+```
+
 ### 文档
 
 参考docs目录:
 
 1. elk入门笔记1.md
 2. Kibana中的可视化数据分析功能.md
+3. 使用ElasticSearch进行自然语言处理：以命名实体识别为例.md

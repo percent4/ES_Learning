@@ -1,0 +1,29 @@
+site_name: ES学习
+
+theme:
+  name: "material"
+  features:
+    - navigation.tabs
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+
+plugins:
+  - search
+
+nav:
+  - Index: index.md
+  - tutorials:
+    - ELK: tutorials/elk入门笔记1.md
+    - ES commands: tutorials/es_useful_command.md
+    - Visualize in Kibana: tutorials/Kibana中的可视化数据分析功能.md
+    - ES with NLP: tutorials/使用ElasticSearch进行自然语言处理：以命名实体识别为例.md

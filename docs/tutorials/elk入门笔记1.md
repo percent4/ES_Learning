@@ -364,7 +364,7 @@ import random
 from flask import Flask, Response
 import logging
 
-logging.basicConfig(filename='../logstash/data/flask.log',
+logging.basicConfig(filename='../../logstash/data/flask.log',
                     level=logging.DEBUG,
                     format='%(asctime)s-%(filename)s-%(funcName)s-%(levelname)s-%(message)s')
 logger = logging.getLogger()
@@ -391,7 +391,7 @@ def io_task():
 def cpu_task():
     t1 = time.time()
     for i in range(10000):
-        n = i*i*i
+        n = i * i * i
     logger.info(f"api_endpoint: /cpu_task, status: 200, cost_time: {(time.time() - t1) * 1000}")
     return "CPU bound task finish!", 200
 
