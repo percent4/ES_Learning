@@ -1,1 +1,2 @@
-elasticsearch==7.17.0
+elasticsearch==8.13.0
+kafka-python==2.0.2
