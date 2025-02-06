@@ -2,7 +2,7 @@ version: "3.1"
 services:
   filebeat:
     container_name: video-filebeat
-    image: elastic/filebeat:7.17.0
+    image: elastic/filebeat:8.13.0
     restart: always
     user: root
     volumes:
@@ -15,8 +15,8 @@ services:
       - filebeat_elk_net
 
   logstash:
-    container_name: logstash-7.17.0
-    image: docker.elastic.co/logstash/logstash:7.17.0
+    container_name: logstash-8.13.0
+    image: docker.elastic.co/logstash/logstash:8.13.0
     volumes:
       - ./logstash/config/logstash.yml:/usr/share/logstash/logstash.yml
       - ./logstash/data:/usr/share/logstash/data
@@ -30,14 +30,15 @@ services:
       - elasticsearch
 
   elasticsearch:
-    container_name: elasticsearch-7.17.0
-    image: elasticsearch:7.17.0
+    container_name: elasticsearch-8.13.0
+    image: elasticsearch:8.13.0
     environment:
       - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m"
       - "http.host=0.0.0.0"
       - "node.name=elastic01"
       - "cluster.name=cluster_elasticsearch"
       - "discovery.type=single-node"
+      - "xpack.security.enabled=false"
     ports:
       - "9200:9200"
       - "9300:9300"
@@ -48,8 +49,8 @@ services:
       - filebeat_elk_net
 
   kibana:
-    container_name: kibana-7.17.0
-    image: kibana:7.17.0
+    container_name: kibana-8.13.0
+    image: kibana:8.13.0
     ports:
       - "5601:5601"
     networks:

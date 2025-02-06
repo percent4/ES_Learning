@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time : 2021/3/1 21:37
 # @Author : Jclian91
-# @File : barch_data_insert.py
+# @File : es_batch_data_insert.py
 # @Place : Yangpu, Shanghai
 import time
 import datetime

@@ -7,7 +7,7 @@ import random
 from flask import Flask, Response
 import logging
 
-logging.basicConfig(filename='../logstash/data/flask.log',
+logging.basicConfig(filename='../filebeat/logs/flask.log',
                     level=logging.DEBUG,
                     format='%(asctime)s-%(filename)s-%(funcName)s-%(levelname)s-%(message)s')
 logger = logging.getLogger()
@@ -56,4 +56,4 @@ def random_status():
 
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=False)

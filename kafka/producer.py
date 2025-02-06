@@ -7,5 +7,5 @@ from kafka import KafkaProducer
 producer = KafkaProducer(bootstrap_servers='localhost:9092')
 for i in range(10):
     message = f'Hello {i} from Kafka.'.encode('utf-8')
-    producer.send(topic='sdtest', value=message)
+    producer.send(topic='school', value=message)
 producer.close()

@@ -3,7 +3,14 @@ filebeat.inputs:
   enabled: true
   paths:
     - /usr/share/filebeat/target/*.log
-output.logstash:
-  hosts: ["logstash:5044"]
-processors:
-  - add_id: ~
+  fields:
+    topic: flask-log
+
+output.kafka:
+  hosts: ["192.168.0.100:9092"]
+  topic: "%{[fields.topic]}"        # 输出到kafka对应topic
+  partition.round_robin:            # 开启kafka的partition分区
+    reachable_only: false
+  required_acks: 1
+  compression: gzip
+  max_message_bytes: 100000000
