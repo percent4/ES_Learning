@@ -24,7 +24,9 @@ ik分词器的配置参考es/ik/config/IKAnalyzer.cfg.xml.
 
 Beats -> Logstash -> ElasticSearch -> Kibana
 
-启动命令: 
+启动命令: `docker-compose -f elk-docker-compose.yml`.
+
+![elk](https://s2.loli.net/2025/04/24/2ZQIfYusF6zSMBb.png)
 
 ### Eland 相关
 
