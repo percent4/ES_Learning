@@ -1,0 +1,335 @@
+2025-02-05 21:44:00,691-_internal.py-_log-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.100:5000
+2025-02-05 21:44:00,691-_internal.py-_log-INFO-[33mPress CTRL+C to quit[0m
+2025-02-05 21:44:06,491-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.00095367431640625
+2025-02-05 21:44:06,491-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:06] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:06,492-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:06,492-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:06] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:06,492-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:06,492-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:06] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:06,493-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:06,493-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:06] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:06,494-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0011920928955078125
+2025-02-05 21:44:06,494-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:06] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:06,494-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:06,495-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:06] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:06,495-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.00095367431640625
+2025-02-05 21:44:06,495-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:06] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:06,496-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:06,496-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:06] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:06,496-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:06,496-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:06] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:06,497-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:06,497-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:06] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:08,516-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2000.2858638763428
+2025-02-05 21:44:08,517-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:08] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:44:10,525-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2003.8540363311768
+2025-02-05 21:44:10,526-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:10] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:44:12,531-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2002.4769306182861
+2025-02-05 21:44:12,531-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:12] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:44:14,536-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2001.74880027771
+2025-02-05 21:44:14,537-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:14] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:44:16,542-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2003.262996673584
+2025-02-05 21:44:16,543-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:16] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:44:16,573-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.5056858062744141
+2025-02-05 21:44:16,574-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:16] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:44:16,575-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.49304962158203125
+2025-02-05 21:44:16,575-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:16] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:44:16,577-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.4830360412597656
+2025-02-05 21:44:16,577-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:16] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:44:16,578-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.4200935363769531
+2025-02-05 21:44:16,578-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:16] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:44:16,579-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.4138946533203125
+2025-02-05 21:44:16,579-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:16] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:44:18,604-server.py-random_sleep-INFO-api_endpoint: /random_sleep, status: 200, cost_time: 2003.5340785980225
+2025-02-05 21:44:18,605-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:18] "GET /random_sleep HTTP/1.1" 200 -
+2025-02-05 21:44:22,613-server.py-random_sleep-INFO-api_endpoint: /random_sleep, status: 200, cost_time: 4005.051851272583
+2025-02-05 21:44:22,614-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:22] "GET /random_sleep HTTP/1.1" 200 -
+2025-02-05 21:44:22,617-server.py-random_sleep-INFO-api_endpoint: /random_sleep, status: 200, cost_time: 0.030040740966796875
+2025-02-05 21:44:22,617-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:22] "GET /random_sleep HTTP/1.1" 200 -
+2025-02-05 21:44:22,645-server.py-random_status-INFO-api_endpoint: /random_status, status: 400, cost_time: 0.007152557373046875
+2025-02-05 21:44:22,645-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:22] "[31m[1mGET /random_status HTTP/1.1[0m" 400 -
+2025-02-05 21:44:22,646-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0019073486328125
+2025-02-05 21:44:22,646-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:22] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:44:22,646-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0019073486328125
+2025-02-05 21:44:22,646-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:22] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:44:22,647-server.py-random_status-INFO-api_endpoint: /random_status, status: 500, cost_time: 0.0021457672119140625
+2025-02-05 21:44:22,647-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:22] "[35m[1mGET /random_status HTTP/1.1[0m" 500 -
+2025-02-05 21:44:22,648-server.py-random_status-INFO-api_endpoint: /random_status, status: 300, cost_time: 0.0030994415283203125
+2025-02-05 21:44:22,648-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:22] "[32mGET /random_status HTTP/1.1[0m" 300 -
+2025-02-05 21:44:22,648-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0019073486328125
+2025-02-05 21:44:22,648-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:22] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:44:22,649-server.py-random_status-INFO-api_endpoint: /random_status, status: 400, cost_time: 0.00095367431640625
+2025-02-05 21:44:22,649-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:22] "[31m[1mGET /random_status HTTP/1.1[0m" 400 -
+2025-02-05 21:44:22,649-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0040531158447265625
+2025-02-05 21:44:22,649-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:22] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:44:22,650-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0019073486328125
+2025-02-05 21:44:22,650-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:22] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:44:22,650-server.py-random_status-INFO-api_endpoint: /random_status, status: 400, cost_time: 0.0019073486328125
+2025-02-05 21:44:22,651-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:22] "[31m[1mGET /random_status HTTP/1.1[0m" 400 -
+2025-02-05 21:44:27,690-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.00095367431640625
+2025-02-05 21:44:27,690-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:27] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:27,691-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:27,692-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:27] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:27,693-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:27,693-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:27] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:27,693-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:27,694-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:27] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:27,694-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:27,694-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:27] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:27,695-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:27,695-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:27] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:27,696-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:27,696-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:27] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:27,697-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:27,697-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:27] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:27,698-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:27,698-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:27] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:27,698-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:27,698-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:27] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:29,726-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2005.0239562988281
+2025-02-05 21:44:29,727-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:29] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:44:31,735-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2004.671335220337
+2025-02-05 21:44:31,736-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:31] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:44:33,740-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2001.291036605835
+2025-02-05 21:44:33,741-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:33] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:44:35,748-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2004.0040016174316
+2025-02-05 21:44:35,749-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:35] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:44:37,755-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2003.3180713653564
+2025-02-05 21:44:37,756-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:37] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:44:37,788-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.4990100860595703
+2025-02-05 21:44:37,788-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:37] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:44:37,790-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.49996376037597656
+2025-02-05 21:44:37,790-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:37] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:44:37,791-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.49996376037597656
+2025-02-05 21:44:37,792-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:37] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:44:37,793-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.5290508270263672
+2025-02-05 21:44:37,793-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:37] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:44:37,794-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.4761219024658203
+2025-02-05 21:44:37,794-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:37] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:44:40,831-server.py-random_sleep-INFO-api_endpoint: /random_sleep, status: 200, cost_time: 3005.0289630889893
+2025-02-05 21:44:40,832-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:40] "GET /random_sleep HTTP/1.1" 200 -
+2025-02-05 21:44:44,838-server.py-random_sleep-INFO-api_endpoint: /random_sleep, status: 200, cost_time: 4002.6159286499023
+2025-02-05 21:44:44,839-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:44] "GET /random_sleep HTTP/1.1" 200 -
+2025-02-05 21:44:46,847-server.py-random_sleep-INFO-api_endpoint: /random_sleep, status: 200, cost_time: 2004.8558712005615
+2025-02-05 21:44:46,848-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:46] "GET /random_sleep HTTP/1.1" 200 -
+2025-02-05 21:44:46,881-server.py-random_status-INFO-api_endpoint: /random_status, status: 500, cost_time: 0.0069141387939453125
+2025-02-05 21:44:46,881-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:46] "[35m[1mGET /random_status HTTP/1.1[0m" 500 -
+2025-02-05 21:44:46,882-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0030994415283203125
+2025-02-05 21:44:46,882-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:46] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:44:46,883-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.00286102294921875
+2025-02-05 21:44:46,883-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:46] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:44:46,884-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0016689300537109375
+2025-02-05 21:44:46,884-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:46] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:44:46,885-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0021457672119140625
+2025-02-05 21:44:46,885-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:46] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:44:46,885-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0021457672119140625
+2025-02-05 21:44:46,886-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:46] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:44:46,886-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0019073486328125
+2025-02-05 21:44:46,886-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:46] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:44:46,887-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0019073486328125
+2025-02-05 21:44:46,887-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:46] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:44:46,888-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.00476837158203125
+2025-02-05 21:44:46,888-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:46] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:44:46,888-server.py-random_status-INFO-api_endpoint: /random_status, status: 300, cost_time: 0.0021457672119140625
+2025-02-05 21:44:46,889-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:46] "[32mGET /random_status HTTP/1.1[0m" 300 -
+2025-02-05 21:44:51,925-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.00095367431640625
+2025-02-05 21:44:51,925-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:51] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:51,926-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.00095367431640625
+2025-02-05 21:44:51,926-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:51] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:51,927-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:51,927-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:51] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:51,928-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:51,928-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:51] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:51,929-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:51,929-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:51] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:51,930-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:51,931-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:51] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:51,931-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:51,932-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:51] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:51,932-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:51,932-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:51] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:51,933-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:51,933-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:51] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:51,935-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:44:51,935-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:51] "GET / HTTP/1.1" 200 -
+2025-02-05 21:44:53,965-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2005.0199031829834
+2025-02-05 21:44:53,966-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:53] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:44:55,972-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2002.7730464935303
+2025-02-05 21:44:55,972-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:55] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:44:57,978-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2003.4878253936768
+2025-02-05 21:44:57,979-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:57] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:44:59,987-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2004.936933517456
+2025-02-05 21:44:59,989-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:44:59] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:45:01,997-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2004.4128894805908
+2025-02-05 21:45:01,998-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:01] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:45:02,032-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.4780292510986328
+2025-02-05 21:45:02,033-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:02] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:45:02,034-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.49591064453125
+2025-02-05 21:45:02,034-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:02] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:45:02,035-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.4153251647949219
+2025-02-05 21:45:02,036-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:02] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:45:02,037-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.4227161407470703
+2025-02-05 21:45:02,037-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:02] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:45:02,038-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.45108795166015625
+2025-02-05 21:45:02,038-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:02] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:45:05,066-server.py-random_sleep-INFO-api_endpoint: /random_sleep, status: 200, cost_time: 3005.016088485718
+2025-02-05 21:45:05,067-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:05] "GET /random_sleep HTTP/1.1" 200 -
+2025-02-05 21:45:08,073-server.py-random_sleep-INFO-api_endpoint: /random_sleep, status: 200, cost_time: 3005.049705505371
+2025-02-05 21:45:08,075-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:08] "GET /random_sleep HTTP/1.1" 200 -
+2025-02-05 21:45:13,082-server.py-random_sleep-INFO-api_endpoint: /random_sleep, status: 200, cost_time: 5003.783941268921
+2025-02-05 21:45:13,083-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:13] "GET /random_sleep HTTP/1.1" 200 -
+2025-02-05 21:45:13,117-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0057220458984375
+2025-02-05 21:45:13,118-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:13] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:13,119-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0040531158447265625
+2025-02-05 21:45:13,119-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:13] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:13,120-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.00286102294921875
+2025-02-05 21:45:13,120-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:13] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:13,121-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0021457672119140625
+2025-02-05 21:45:13,121-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:13] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:13,122-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0021457672119140625
+2025-02-05 21:45:13,122-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:13] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:13,123-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0021457672119140625
+2025-02-05 21:45:13,123-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:13] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:13,123-server.py-random_status-INFO-api_endpoint: /random_status, status: 300, cost_time: 0.00095367431640625
+2025-02-05 21:45:13,123-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:13] "[32mGET /random_status HTTP/1.1[0m" 300 -
+2025-02-05 21:45:13,124-server.py-random_status-INFO-api_endpoint: /random_status, status: 400, cost_time: 0.00476837158203125
+2025-02-05 21:45:13,125-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:13] "[31m[1mGET /random_status HTTP/1.1[0m" 400 -
+2025-02-05 21:45:13,125-server.py-random_status-INFO-api_endpoint: /random_status, status: 400, cost_time: 0.0019073486328125
+2025-02-05 21:45:13,126-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:13] "[31m[1mGET /random_status HTTP/1.1[0m" 400 -
+2025-02-05 21:45:13,126-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.00286102294921875
+2025-02-05 21:45:13,127-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:13] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:18,163-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.00286102294921875
+2025-02-05 21:45:18,164-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:18] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:18,165-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:45:18,165-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:18] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:18,166-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:45:18,166-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:18] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:18,167-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:45:18,167-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:18] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:18,168-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:45:18,168-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:18] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:18,169-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:45:18,169-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:18] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:18,169-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:45:18,169-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:18] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:18,170-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:45:18,170-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:18] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:18,171-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:45:18,171-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:18] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:18,172-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:45:18,172-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:18] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:20,200-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2005.0251483917236
+2025-02-05 21:45:20,201-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:20] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:45:22,208-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2004.776954650879
+2025-02-05 21:45:22,209-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:22] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:45:24,214-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2002.0558834075928
+2025-02-05 21:45:24,216-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:24] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:45:26,223-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2004.178762435913
+2025-02-05 21:45:26,224-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:26] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:45:28,230-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2002.9871463775635
+2025-02-05 21:45:28,230-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:28] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:45:28,266-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.5960464477539062
+2025-02-05 21:45:28,266-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:28] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:45:28,268-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.476837158203125
+2025-02-05 21:45:28,268-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:28] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:45:28,270-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.7939338684082031
+2025-02-05 21:45:28,270-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:28] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:45:28,271-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.5390644073486328
+2025-02-05 21:45:28,272-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:28] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:45:28,273-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.4889965057373047
+2025-02-05 21:45:28,273-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:28] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:45:28,298-server.py-random_sleep-INFO-api_endpoint: /random_sleep, status: 200, cost_time: 0.013113021850585938
+2025-02-05 21:45:28,298-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:28] "GET /random_sleep HTTP/1.1" 200 -
+2025-02-05 21:45:33,305-server.py-random_sleep-INFO-api_endpoint: /random_sleep, status: 200, cost_time: 5005.19585609436
+2025-02-05 21:45:33,306-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:33] "GET /random_sleep HTTP/1.1" 200 -
+2025-02-05 21:45:34,314-server.py-random_sleep-INFO-api_endpoint: /random_sleep, status: 200, cost_time: 1004.685640335083
+2025-02-05 21:45:34,315-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:34] "GET /random_sleep HTTP/1.1" 200 -
+2025-02-05 21:45:34,354-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0059604644775390625
+2025-02-05 21:45:34,354-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:34] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:34,355-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.003814697265625
+2025-02-05 21:45:34,355-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:34] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:34,356-server.py-random_status-INFO-api_endpoint: /random_status, status: 300, cost_time: 0.0019073486328125
+2025-02-05 21:45:34,356-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:34] "[32mGET /random_status HTTP/1.1[0m" 300 -
+2025-02-05 21:45:34,357-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0040531158447265625
+2025-02-05 21:45:34,357-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:34] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:34,358-server.py-random_status-INFO-api_endpoint: /random_status, status: 500, cost_time: 0.0019073486328125
+2025-02-05 21:45:34,358-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:34] "[35m[1mGET /random_status HTTP/1.1[0m" 500 -
+2025-02-05 21:45:34,358-server.py-random_status-INFO-api_endpoint: /random_status, status: 500, cost_time: 0.0021457672119140625
+2025-02-05 21:45:34,358-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:34] "[35m[1mGET /random_status HTTP/1.1[0m" 500 -
+2025-02-05 21:45:34,359-server.py-random_status-INFO-api_endpoint: /random_status, status: 500, cost_time: 0.0021457672119140625
+2025-02-05 21:45:34,359-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:34] "[35m[1mGET /random_status HTTP/1.1[0m" 500 -
+2025-02-05 21:45:34,360-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0030994415283203125
+2025-02-05 21:45:34,360-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:34] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:34,361-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.003814697265625
+2025-02-05 21:45:34,361-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:34] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:34,361-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.00286102294921875
+2025-02-05 21:45:34,362-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:34] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:39,405-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0011920928955078125
+2025-02-05 21:45:39,406-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:39] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:39,407-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:45:39,407-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:39] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:39,408-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:45:39,408-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:39] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:39,409-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:45:39,409-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:39] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:39,410-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:45:39,410-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:39] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:39,411-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:45:39,411-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:39] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:39,411-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.00095367431640625
+2025-02-05 21:45:39,412-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:39] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:39,412-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0
+2025-02-05 21:45:39,412-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:39] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:39,413-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.0011920928955078125
+2025-02-05 21:45:39,413-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:39] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:39,414-server.py-index-INFO-api_endpoint: /, status: 200, cost_time: 0.00095367431640625
+2025-02-05 21:45:39,414-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:39] "GET / HTTP/1.1" 200 -
+2025-02-05 21:45:41,440-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2003.061056137085
+2025-02-05 21:45:41,441-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:41] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:45:43,446-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2002.7389526367188
+2025-02-05 21:45:43,446-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:43] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:45:45,453-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2005.0339698791504
+2025-02-05 21:45:45,453-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:45] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:45:47,458-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2001.7049312591553
+2025-02-05 21:45:47,459-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:47] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:45:49,466-server.py-io_task-INFO-api_endpoint: /io_task, status: 200, cost_time: 2004.668951034546
+2025-02-05 21:45:49,468-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:49] "GET /io_task HTTP/1.1" 200 -
+2025-02-05 21:45:49,510-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.6499290466308594
+2025-02-05 21:45:49,510-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:49] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:45:49,511-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.2598762512207031
+2025-02-05 21:45:49,512-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:49] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:45:49,512-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.25916099548339844
+2025-02-05 21:45:49,512-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:49] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:45:49,513-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.270843505859375
+2025-02-05 21:45:49,513-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:49] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:45:49,514-server.py-cpu_task-INFO-api_endpoint: /cpu_task, status: 200, cost_time: 0.2701282501220703
+2025-02-05 21:45:49,514-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:49] "GET /cpu_task HTTP/1.1" 200 -
+2025-02-05 21:45:51,537-server.py-random_sleep-INFO-api_endpoint: /random_sleep, status: 200, cost_time: 2001.720666885376
+2025-02-05 21:45:51,538-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:51] "GET /random_sleep HTTP/1.1" 200 -
+2025-02-05 21:45:54,546-server.py-random_sleep-INFO-api_endpoint: /random_sleep, status: 200, cost_time: 3003.906011581421
+2025-02-05 21:45:54,546-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:54] "GET /random_sleep HTTP/1.1" 200 -
+2025-02-05 21:45:58,553-server.py-random_sleep-INFO-api_endpoint: /random_sleep, status: 200, cost_time: 4003.330945968628
+2025-02-05 21:45:58,554-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:58] "GET /random_sleep HTTP/1.1" 200 -
+2025-02-05 21:45:58,581-server.py-random_status-INFO-api_endpoint: /random_status, status: 500, cost_time: 0.00476837158203125
+2025-02-05 21:45:58,581-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:58] "[35m[1mGET /random_status HTTP/1.1[0m" 500 -
+2025-02-05 21:45:58,582-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0026226043701171875
+2025-02-05 21:45:58,582-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:58] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:58,583-server.py-random_status-INFO-api_endpoint: /random_status, status: 300, cost_time: 0.0030994415283203125
+2025-02-05 21:45:58,583-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:58] "[32mGET /random_status HTTP/1.1[0m" 300 -
+2025-02-05 21:45:58,584-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0016689300537109375
+2025-02-05 21:45:58,584-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:58] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:58,585-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0021457672119140625
+2025-02-05 21:45:58,585-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:58] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:58,586-server.py-random_status-INFO-api_endpoint: /random_status, status: 400, cost_time: 0.0021457672119140625
+2025-02-05 21:45:58,586-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:58] "[31m[1mGET /random_status HTTP/1.1[0m" 400 -
+2025-02-05 21:45:58,587-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0021457672119140625
+2025-02-05 21:45:58,587-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:58] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:58,588-server.py-random_status-INFO-api_endpoint: /random_status, status: 500, cost_time: 0.00095367431640625
+2025-02-05 21:45:58,588-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:58] "[35m[1mGET /random_status HTTP/1.1[0m" 500 -
+2025-02-05 21:45:58,588-server.py-random_status-INFO-api_endpoint: /random_status, status: 200, cost_time: 0.0019073486328125
+2025-02-05 21:45:58,588-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:58] "GET /random_status HTTP/1.1" 200 -
+2025-02-05 21:45:58,589-server.py-random_status-INFO-api_endpoint: /random_status, status: 400, cost_time: 0.00095367431640625
+2025-02-05 21:45:58,589-_internal.py-_log-INFO-127.0.0.1 - - [05/Feb/2025 21:45:58] "[31m[1mGET /random_status HTTP/1.1[0m" 400 -

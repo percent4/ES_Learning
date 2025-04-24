@@ -2,6 +2,7 @@
 # @place: Pudong, Shanghai
 # @file: mysql_create_table.py
 # @time: 2023/12/23 23:29
+from datetime import datetime as dt
 from sqlalchemy.dialects.mysql import INTEGER, VARCHAR, DATETIME
 from sqlalchemy import Column
 from sqlalchemy import create_engine
@@ -12,18 +13,15 @@ Base = declarative_base()
 class Users(Base):
     __tablename__ = 'users'
 
-    id = Column(INTEGER, primary_key=True)
+    id = Column(INTEGER, primary_key=True, autoincrement=True)
     name = Column(VARCHAR(256), nullable=False)
-    age = Column(INTEGER)
-    place = Column(VARCHAR(256), nullable=False)
-    insert_time = Column(DATETIME)
+    age = Column(INTEGER, nullable=True)
+    place = Column(VARCHAR(256), nullable=True)
+    gender = Column(VARCHAR(10), nullable=True)
+    insert_time = Column(DATETIME, default=dt.now())
 
-    def __init__(self, id, name, age, place, insert_time):
-        self.id = id
-        self.name = name
-        self.age = age
-        self.place = place
-        self.insert_time = insert_time
+    def __repr__(self):
+        return f"User(id={self.id}, name={self.name}, age={self.age}, place={self.place}), gender={self.gender})"
 
 
 def init_db():

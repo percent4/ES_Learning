@@ -3,3 +3,6 @@ es/data
 __pycache__
 mysql/data
 filebeat/data
+kafka/kafka_data
+data
+site
