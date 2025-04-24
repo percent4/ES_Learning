@@ -13,6 +13,7 @@ services:
       - "9092:9092"
     volumes:
       - ./kafka_data:/bitnami/kafka
+      - ./client.properties:/tmp/client.properties
     environment:
       - KAFKA_KRAFT_MODE=true
       - KAFKA_CFG_NODE_ID=1
